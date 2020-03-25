@@ -9,8 +9,12 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { CitiesWeatherViewerComponent } from './cities-weather-viewer/cities-weather-viewer.component';
 import { CityWeatherComponent } from './city-weather/city-weather.component';
 
+import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormGroup, FormControl } from '@angular/forms'; 
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -35,7 +39,8 @@ const appRoutes: Routes = [
       { enableTracing: true } // <-- debugging purposes only
     ),
 
-    MatButtonModule, MatCardModule,
+    MatInputModule, MatButtonModule, MatCardModule, MatFormFieldModule, ReactiveFormsModule,
+    FormGroup, FormControl,
   ],
   providers: [],
   bootstrap: [AppComponent]
